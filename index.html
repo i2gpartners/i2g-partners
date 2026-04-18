@@ -45,34 +45,70 @@
 
     .hero {
       padding: 100px 20px;
-      text-align: center;
       background: linear-gradient(135deg, #0f2a5c, #3a6bbf);
       color: white;
     }
 
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero-text {
+      max-width: 550px;
+    }
+
     .hero h1 {
-      font-size: 42px;
+      font-size: 48px;
       margin-bottom: 20px;
+      letter-spacing: -0.5px;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: auto;
       font-size: 18px;
       opacity: 0.9;
     }
 
-    .cta {
-      margin-top: 30px;
+    .hero-image img {
+      width: 260px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
     }
 
     .cta a {
-      background: white;
-      color: var(--primary);
-      padding: 12px 24px;
-      border-radius: 30px;
-      text-decoration: none;
+      display: inline-block;
+      margin-top: 25px;
+      background: linear-gradient(135deg, #4da3ff, #2b7be4);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 8px;
       font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .metrics {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 60px;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .metric h3 {
+      font-size: 32px;
+      margin: 0;
     }
 
     .section {
@@ -84,7 +120,6 @@
     .section h2 {
       text-align: center;
       margin-bottom: 40px;
-      font-size: 28px;
     }
 
     .grid {
@@ -98,37 +133,28 @@
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.2s ease;
     }
 
-    .card h3 { margin-top: 0; }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
 
-    .metrics {
+    .about {
       display: flex;
-      justify-content: space-around;
-      text-align: center;
+      align-items: center;
+      gap: 40px;
       flex-wrap: wrap;
-      gap: 20px;
     }
 
-    .metric h3 {
-      font-size: 32px;
-      margin: 0;
-      color: var(--primary);
-    }
-
-    .image-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .image-row img {
-      width: 100%;
+    .about img {
+      width: 220px;
       border-radius: 12px;
     }
 
     .cta-section {
-      background: var(--primary);
+      background: linear-gradient(135deg, #0f2a5c, #3a6bbf);
       color: white;
       text-align: center;
       padding: 80px 20px;
@@ -141,8 +167,46 @@
       color: white;
     }
 
-    footer a { color: var(--accent); }
-  </style>
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .hero-text { text-align: center; }
+    }
+      .form-container {
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .form-text {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .form-row input {
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      min-width: 180px;
+    }
+
+    .form-row button {
+      background: linear-gradient(135deg, #4da3ff, #2b7be4);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+</style>
 </head>
 <body>
 
@@ -150,60 +214,91 @@
   <img src="i2G_Logo_DualColor.jpg" alt="i2G Logo" />
   <nav>
     <a href="#services">Services</a>
-    <a href="#impact">Impact</a>
+    <a href="#process">Process</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Turn Strategy Into EBITDA — Fast</h1>
-  <p>I work with private equity firms and CEOs to execute high-impact transformation, operational turnarounds, and growth initiatives within 100 days.</p>
-  <div class="cta">
-    <a href="#contact">Schedule a Conversation</a>
+  <div class="hero-container">
+    <div class="hero-text">
+      <p style="opacity:0.8; margin-bottom:10px; font-weight:500; letter-spacing:1px;">Innovate to Grow</p>
+      <h1>Drive EBITDA Growth in 100 Days — or Less</h1>
+      <p>I partner with private equity firms and portfolio CEOs to execute value creation plans, fix underperformance, and deliver measurable results fast.</p>
+      <div class="cta">
+        <a href="#contact">Book a 30-Minute Strategy Call</a>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <h3>30%</h3>
+          <p>EBITDA Improvement</p>
+        </div>
+        <div class="metric">
+          <h3>$650M</h3>
+          <p>SaaS Growth</p>
+        </div>
+        <div class="metric">
+          <h3>$100M+</h3>
+          <p>Post-Merger Value</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="DougHeadshotEdit.png" alt="Doug Schwieger" />
+      <p style="margin-top:10px; font-weight:600;">Doug Schwieger</p>
+      <p style="opacity:0.8;">Operating Executive | Transformation Leader</p>
+    </div>
   </div>
 </section>
+
+
 
 <section id="services" class="section">
   <h2>What I Do</h2>
   <div class="grid">
     <div class="card">
-      <h3>100-Day Execution</h3>
-      <p>Translate value creation plans into measurable results with disciplined execution.</p>
+      <h3>Execute the 100-Day Plan</h3>
+      <p>Turn board-level strategy into weekly execution with clear ownership, KPIs, and accountability.</p>
     </div>
     <div class="card">
-      <h3>Operational Turnarounds</h3>
-      <p>Improve margins, fix underperformance, and stabilize operations quickly.</p>
+      <h3>Stabilize Underperforming Assets</h3>
+      <p>Rapidly diagnose issues, improve margins, and restore operational control.</p>
     </div>
     <div class="card">
-      <h3>Transformation Leadership</h3>
-      <p>Lead enterprise initiatives across operations, tech, and go-to-market.</p>
+      <h3>Lead High-Stakes Transformations</h3>
+      <p>Step in where execution risk is highest across operations, tech, and go-to-market.</p>
     </div>
   </div>
 </section>
 
-<section id="impact" class="section">
-  <h2>Proven Impact</h2>
-  <div class="metrics">
-    <div class="metric">
-      <h3>30%</h3>
-      <p>EBITDA Improvement</p>
+<section id="process" class="section">
+  <h2>How I Deliver Results</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Rapid Diagnostic</h3>
+      <p>Assess performance gaps, risks, and opportunities within weeks.</p>
     </div>
-    <div class="metric">
-      <h3>$650M</h3>
-      <p>SaaS Growth</p>
+    <div class="card">
+      <h3>2. Execution Sprint</h3>
+      <p>Implement focused initiatives with aggressive timelines and accountability.</p>
     </div>
-    <div class="metric">
-      <h3>$100M+</h3>
-      <p>Post-Merger Value</p>
+    <div class="card">
+      <h3>3. Measurable Outcomes</h3>
+      <p>Deliver tangible EBITDA impact and operational improvements.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>How I Work</h2>
-  <div class="image-row">
-    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" />
-    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
+  <div class="about">
+    <img src="DougHeadshotEdit.png" alt="Doug Schwieger" />
+    <div>
+      <h2>About</h2>
+      <p>I’ve led large-scale transformations across SaaS, operations, and M&A environments—delivering measurable value in high-pressure situations where execution matters most.</p>
+      <p>I work directly with private equity firms and CEOs to ensure strategy turns into results—quickly and decisively.</p>
+    </div>
   </div>
 </section>
 
@@ -211,7 +306,7 @@
   <h2>Let’s Talk</h2>
   <p>If you're navigating a critical inflection point, I can help deliver results quickly.</p>
   <p>Email: doug.schwieger@i2gpartners.com</p>
-  <p><a href="https://www.linkedin.com/in/doug-schwieger/" target="_blank">LinkedIn Profile</a></p>
+  <p><a href="https://www.linkedin.com/in/doug-schwieger/" target="_blank" style="color:white; text-decoration:underline;">LinkedIn Profile</a></p>
 </section>
 
 <footer>
