@@ -1,330 +1,481 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>i2G Partners LLC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #0f2a5c;
-      --accent: #4da3ff;
-      --bg: #f7f9fc;
-      --text: #1a1a1a;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>i2G Partners LLC | Innovate to Grow</title>
 
-    * { box-sizing: border-box; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+<style>
 
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: white;
-      position: sticky;
-      top: 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      z-index: 10;
-    }
+:root{
+  --primary:#0f2a5c;
+  --accent:#4da3ff;
+  --bg:#f7f9fc;
+  --text:#1a1a1a;
+}
 
-    header img { height: 40px; }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .hero {
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #0f2a5c, #3a6bbf);
-      color: white;
-    }
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:white;
+  line-height:1.6;
+}
 
-    .hero-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 60px;
-      flex-wrap: nowrap;
-      max-width: 1100px;
-      margin: auto;
-    }
+/* HEADER */
 
-    .hero-text {
-      max-width: 550px;
-    }
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 50px;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
-    }
+header img{
+  height:42px;
+}
 
-    .hero p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  margin-left:30px;
+  font-weight:500;
+  transition:.2s;
+}
 
-    .hero-image {
-      background: rgba(255,255,255,0.05);
-      padding: 16px;
-      border-radius: 16px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    }
+nav a:hover{
+  color:var(--primary);
+}
 
-    .hero-image img {
-      width: 260px;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: 50% 30%;
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
-    }
+/* HERO */
 
-    .cta a {
-      display: inline-block;
-      margin-top: 25px;
-      background: linear-gradient(135deg, #4da3ff, #2b7be4);
-      color: white;
-      padding: 16px 32px;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
+.hero{
+  min-height:90vh;
+  background-image:
+    linear-gradient(
+      rgba(10,20,50,.72),
+      rgba(10,20,50,.72)
+    ),
+    url("DAD-3.jpeg");
 
-    .cta a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+}
 
-    .metrics {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 60px;
-      text-align: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.hero-content{
+  max-width:900px;
+  padding:40px;
+}
 
-    .metric h3 {
-      font-size: 32px;
-      margin: 0;
-    }
+.tagline{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:14px;
+  font-weight:700;
+  color:#8ec5ff;
+  margin-bottom:15px;
+}
 
-    .section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.hero h1{
+  font-size:64px;
+  line-height:1.1;
+  margin-bottom:25px;
+}
 
-    .section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.hero-subtitle{
+  font-size:22px;
+  max-width:750px;
+  margin:auto;
+  opacity:.95;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+.cta a{
+  display:inline-block;
+  margin-top:35px;
+  background:linear-gradient(135deg,#4da3ff,#2b7be4);
+  color:white;
+  text-decoration:none;
+  padding:16px 34px;
+  border-radius:10px;
+  font-weight:600;
+  transition:.2s;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      transition: all 0.2s ease;
-    }
+.cta a:hover{
+  transform:translateY(-2px);
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
+/* INDUSTRIES */
 
-    .about {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+.industry-bar{
+  background:white;
+  padding:35px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  font-weight:600;
+  color:#666;
+}
 
-    .about img {
-      width: 220px;
-      border-radius: 12px;
-    }
+/* GENERAL */
 
-    .cta-section {
-      background: linear-gradient(135deg, #0f2a5c, #3a6bbf);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+.section{
+  max-width:1150px;
+  margin:auto;
+  padding:90px 20px;
+}
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #0a1a33;
-      color: white;
-    }
+.section h2{
+  text-align:center;
+  margin-bottom:50px;
+  color:var(--primary);
+  font-size:36px;
+}
 
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 36px; }
-      .hero-text { text-align: center; }
-      .hero-container { flex-wrap: wrap; justify-content: center; }
-    }
-      .hero-text { text-align: center; }
-    }
-      .form-container {
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
 
-    .form-text {
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+.card{
+  background:white;
+  padding:35px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  transition:.2s;
+}
 
-    .form-row {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.card:hover{
+  transform:translateY(-4px);
+}
 
-    .form-row input {
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      min-width: 180px;
-    }
+.card h3{
+  margin-bottom:15px;
+  color:var(--primary);
+}
 
-    .form-row button {
-      background: linear-gradient(135deg, #4da3ff, #2b7be4);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
+/* IMPACT */
+
+.impact .card{
+  text-align:center;
+}
+
+.impact .card h3{
+  font-size:42px;
+  color:var(--accent);
+}
+
+/* ABOUT */
+
+.about-modern{
+  display:flex;
+  gap:60px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.about-image img{
+  width:350px;
+  max-width:100%;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h2{
+  text-align:left;
+  margin-bottom:25px;
+}
+
+.about-text p{
+  margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.cta-section{
+  background:linear-gradient(135deg,#0f2a5c,#3a6bbf);
+  color:white;
+  text-align:center;
+  padding:90px 20px;
+}
+
+.cta-section h2{
+  margin-bottom:20px;
+}
+
+.cta-section a{
+  color:white;
+}
+
+/* FOOTER */
+
+footer{
+  background:#081429;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+footer p{
+  margin:5px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  header{
+    padding:15px 20px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero-subtitle{
+    font-size:18px;
+  }
+
+  .about-text h2{
+    text-align:center;
+  }
+
+  .about-modern{
+    text-align:center;
+  }
+}
 
 </style>
+
 </head>
+
 <body>
 
 <header>
-  <img src="i2G_Logo_DualColor.jpg" alt="i2G Logo" />
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<img src="i2G_Logo_DualColor.jpg" alt="i2G Partners Logo">
+
+<nav>
+<a href="#services">Services</a>
+<a href="#impact">Impact</a>
+<a href="#engagements">Engagements</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="hero-container">
-    <div class="hero-text">
-      <p style="opacity:0.8; margin-bottom:10px; font-weight:500; letter-spacing:1px;">Innovate to Grow</p>
-      <h1>Drive EBITDA Growth in 100 Days — or Less</h1>
-      <p>I partner with private equity firms and portfolio CEOs to execute value creation plans, fix underperformance, and deliver measurable results fast.</p>
-      <div class="cta">
-        <a href="#contact">Book a 30-Minute Strategy Call</a>
-      </div>
 
-      <div class="metrics">
-        <div class="metric">
-          <h3>30%</h3>
-          <p>EBITDA Improvement</p>
-        </div>
-        <div class="metric">
-          <h3>$650M</h3>
-          <p>SaaS Growth</p>
-        </div>
-        <div class="metric">
-          <h3>$100M+</h3>
-          <p>Post-Merger Value</p>
-        </div>
-      </div>
-    </div>
+<div class="hero-content">
 
-    <div class="hero-image">
-      <img src="DougHeadshotEdit.png" alt="Doug Schwieger" />
-      <p style="margin-top:10px; font-weight:600;">Doug Schwieger</p>
-      <p style="opacity:0.8;">Operating Executive | Transformation Leader</p>
-    </div>
-  </div>
+<p class="tagline">Innovate to Grow</p>
+
+<h1>Transform Strategy Into Measurable Results</h1>
+
+<p class="hero-subtitle">
+Helping executives, investors, and leadership teams accelerate growth,
+improve EBITDA, and execute business transformations that deliver
+measurable outcomes.
+</p>
+
+<div class="cta">
+<a href="#contact">Discuss an Engagement</a>
+</div>
+
+</div>
+
 </section>
 
+<section class="industry-bar">
 
+<span>Private Equity</span> <span>SaaS</span> <span>Healthcare</span> <span>Manufacturing</span> <span>Logistics</span> <span>Services</span>
+
+</section>
 
 <section id="services" class="section">
-  <h2>What I Do</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Execute the 100-Day Plan</h3>
-      <p>Turn board-level strategy into weekly execution with clear ownership, KPIs, and accountability.</p>
-    </div>
-    <div class="card">
-      <h3>Stabilize Underperforming Assets</h3>
-      <p>Rapidly diagnose issues, improve margins, and restore operational control.</p>
-    </div>
-    <div class="card">
-      <h3>Lead High-Stakes Transformations</h3>
-      <p>Step in where execution risk is highest across operations, tech, and go-to-market.</p>
-    </div>
-  </div>
+
+<h2>How I Help Organizations Grow</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Strategy & Planning</h3>
+<p>Develop strategic roadmaps, align priorities, establish KPIs and create execution plans that drive measurable business results.</p>
+</div>
+
+<div class="card">
+<h3>Transformation Execution</h3>
+<p>Lead digital, operational and M&A integration programs through disciplined governance and execution.</p>
+</div>
+
+<div class="card">
+<h3>Process Improvement</h3>
+<p>Improve customer experience, employee engagement, operational performance and financial outcomes.</p>
+</div>
+
+<div class="card">
+<h3>Business Advisory & Interim Leadership</h3>
+<p>Provide executive coaching, strategic guidance and interim leadership across operations, transformation and general management.</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="process" class="section">
-  <h2>How I Deliver Results</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1. Rapid Diagnostic</h3>
-      <p>Assess performance gaps, risks, and opportunities within weeks.</p>
-    </div>
-    <div class="card">
-      <h3>2. Execution Sprint</h3>
-      <p>Implement focused initiatives with aggressive timelines and accountability.</p>
-    </div>
-    <div class="card">
-      <h3>3. Measurable Outcomes</h3>
-      <p>Deliver tangible EBITDA impact and operational improvements.</p>
-    </div>
-  </div>
+<section id="impact" class="section impact">
+
+<h2>Selected Impact</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>30%</h3>
+<p>EBITDA improvement in a PE-backed industrial services company.</p>
+</div>
+
+<div class="card">
+<h3>$650M</h3>
+<p>Scaled a logistics SaaS platform from startup to market leader.</p>
+</div>
+
+<div class="card">
+<h3>$100M+</h3>
+<p>Growth generated through post-merger integration initiatives.</p>
+</div>
+
+<div class="card">
+<h3>Fortune 20</h3>
+<p>Led enterprise transformations across operations, technology and go-to-market functions.</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="section">
-  <div class="about">
-    <div>
-      <h2>About</h2>
-      <p>I’ve led large-scale transformations across SaaS, operations, and M&A environments—delivering measurable value in high-pressure situations where execution matters most.</p>
-      <p>I work directly with private equity firms and CEOs to ensure strategy turns into results—quickly and decisively.</p>
-    </div>
-  </div>
+
+<div class="about-modern">
+
+<div class="about-image">
+<img src="DAD-4.jpeg" alt="Doug Schwieger">
+</div>
+
+<div class="about-text">
+
+<h2>About Doug Schwieger</h2>
+
+<p>
+Doug Schwieger is a transformation and growth executive specializing in value creation, EBITDA improvement, strategic execution and operational leadership.
+</p>
+
+<p>
+His experience spans SaaS, healthcare, manufacturing, logistics and service organizations across Fortune 20 enterprises and lower middle-market companies.
+</p>
+
+<p>
+Through i2G Partners, Doug helps executives transform, innovate and grow by turning strategic initiatives into measurable business outcomes.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="engagements" class="section">
+
+<h2>Typical Engagements</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Operating Partner Support</h3>
+<p>Portfolio company value creation planning and execution.</p>
+</div>
+
+<div class="card">
+<h3>Chief Transformation Officer</h3>
+<p>Lead enterprise-wide transformation initiatives and strategic programs.</p>
+</div>
+
+<div class="card">
+<h3>Interim COO</h3>
+<p>Operational leadership, turnaround execution and organizational stabilization.</p>
+</div>
+
+<div class="card">
+<h3>Strategic PMO Leadership</h3>
+<p>Build governance, accountability and execution disciplines for major initiatives.</p>
+</div>
+
+</div>
+
 </section>
 
 <section class="cta-section" id="contact">
-  <h2>Let’s Talk</h2>
-  <p>If you're navigating a critical inflection point, I can help deliver results quickly.</p>
-  <p>Email: doug.schwieger@i2gpartners.com</p>
-  <p><a href="https://www.linkedin.com/in/doug-schwieger/" target="_blank" style="color:white; text-decoration:underline;">LinkedIn Profile</a></p>
+
+<h2>Ready to Transform, Innovate and Grow?</h2>
+
+<p style="max-width:800px;margin:0 auto 25px;">
+Whether you need transformation leadership, operational improvement,
+strategic planning support or interim executive leadership,
+I'd welcome a conversation.
+</p>
+
+<p>
+<strong>Email:</strong><br>
+doug.schwieger@i2gpartners.com
+</p>
+
+<br>
+
+<p>
+<a href="https://www.linkedin.com/in/doug-schwieger/" target="_blank">
+Connect on LinkedIn
+</a>
+</p>
+
 </section>
 
 <footer>
-  <p>© 2026 i2G Partners LLC</p>
+
+<p><strong>i2G Partners LLC</strong></p>
+<p>Innovate to Grow</p>
+<p>Powell, Ohio</p>
+<p>© 2026 i2G Partners LLC. All Rights Reserved.</p>
+
 </footer>
 
 </body>
