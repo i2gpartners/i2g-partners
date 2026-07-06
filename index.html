@@ -1,36 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>i2G Partners LLC</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;color:#1a1a1a}
-header{position:fixed;top:0;left:0;right:0;background:#fff;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.08);z-index:10}
-nav a{margin-left:24px;text-decoration:none;color:#0f2a5c}
-.hero{margin-top:72px;display:grid;grid-template-columns:1.1fr 1fr;min-height:70vh}
-.left{padding:70px;background:#fff}
-.left h1{font-size:56px;color:#0f2a5c}
-.btn{display:inline-block;background:#165DFF;color:#fff;padding:14px 24px;border-radius:8px;text-decoration:none}
-.right{background:url('DAD-8.jpeg') center/cover no-repeat}
-.section{padding:70px 8%;max-width:1200px;margin:auto}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{padding:24px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.metrics{background:#0f2a5c;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));text-align:center}
-.metric{padding:30px}
-.testimonial{border-left:4px solid #165DFF;padding:20px;background:#f8f9fb;margin:20px 0}
-.about{display:grid;grid-template-columns:320px 1fr;gap:40px;align-items:center}
-.about img{width:100%;border-radius:16px}
-footer{background:#0f2a5c;color:#fff;padding:40px;text-align:center}
-@media(max-width:900px){.hero,.about{grid-template-columns:1fr}.right{min-height:420px}.left h1{font-size:42px}}
-</style></head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="i2G Partners LLC helps CEOs, investors, and executive teams accelerate value creation through interim operating leadership, transformation execution, and growth-focused PMO support." />
+  <title>i2G Partners LLC | Innovate to Grow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
 <body>
-<header><img src="i2G_Logo_DualColor.jpg" height="48"><nav><a href="#services">Services</a><a href="#impact">Impact</a><a href="#testimonials">Testimonials</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
-<section class="hero"><div class="left"><p><b>Innovate to Grow</b></p><h1>Transform Strategy Into Measurable Results</h1><p>I partner with CEOs, founders, investors and leadership teams to accelerate growth, improve profitability and execute the strategic initiatives that matter most.</p><a class="btn" href="#contact">Discuss an Engagement</a></div><div class="right"></div></section>
-<section class="metrics"><div class="metric"><h2>30%</h2><p>EBITDA Improvement</p></div><div class="metric"><h2>$650M</h2><p>SaaS Growth</p></div><div class="metric"><h2>$50M</h2><p>Innovation Portfolio</p></div><div class="metric"><h2>$200M</h2><p>Sales Transformation</p></div><div class="metric"><h2>$100M+</h2><p>Post‑Merger Growth</p></div></section>
-<section id="services" class="section"><h2>How I Help Organizations Grow</h2><div class="cards"><div class="card"><h3>Strategy & Planning</h3></div><div class="card"><h3>Transformation Execution</h3></div><div class="card"><h3>Process Improvement</h3></div><div class="card"><h3>Fractional Leadership</h3></div></div></section>
-<section id="impact" class="section"><h2>Typical Engagements</h2><ul><li>Digital transformations</li><li>Value creation plans</li><li>Fractional CTrO, COO, CRO, CMO, GM</li><li>Startup & middle market advisory</li></ul></section>
-<section id="testimonials" class="section"><h2>What Clients Say</h2><div class="testimonial"><strong>Derek Garrod</strong><p>“Doug is an optimistic, trusted leader who combines product strategy, healthcare logistics expertise and digital transformation experience with an unwavering focus on customer outcomes. He is an asset to any transformation initiative.”</p></div><div class="testimonial"><strong>Marc Mullen</strong><p>“Doug consistently led our highest‑priority initiatives, simplifying complex problems, aligning teams and delivering results. He is a calm, steady executive who earns trust and drives execution.”</p></div><div class="testimonial"><strong>Your Third Recommendation</strong><p>Add another LinkedIn recommendation here.</p></div></section>
-<section id="about" class="section about"><img src="DAD-4.jpeg"><div><h2>About Doug Schwieger</h2><p>Fractional Transformation & GTM Executive specializing in value creation, profit growth and business transformation for start-ups to middle market companies.</p><p>Experience spans SaaS, healthcare, manufacturing, logistics and service industries across Fortune 20 and lower middle market companies.</p><img src="DAD-3.jpeg" style="width:100%;margin-top:20px;border-radius:16px"></div></section>
-<footer id="contact"><h2>Let's Start a Conversation</h2><p>doug.schwieger@i2gpartners.com</p><p>linkedin.com/in/doug-schwieger</p></footer>
-</body></html>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="i2G Partners home">
+        <span class="brand-mark" aria-hidden="true">i2G</span>
+        <span class="brand-text">
+          <strong>i2G Partners</strong>
+          <span>Innovate to Grow</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#impact">Impact</a>
+        <a href="#approach">Approach</a>
+        <a href="#testimonials">Testimonials</a>
+        <a class="button button-small" href="mailto:info@i2gpartners.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Interim Operating Leadership • Transformation • Value Creation</p>
+          <h1>Experienced execution leadership for moments that matter.</h1>
+          <p class="hero-subtitle">i2G Partners helps CEOs, investors, and executive teams convert strategy into measurable results through focused operating leadership, transformation execution, and pragmatic growth support.</p>
+          <div class="hero-actions">
+            <a class="button" href="mailto:info@i2gpartners.com">Start a Conversation</a>
+            <a class="button button-secondary" href="#services">Explore Services</a>
+          </div>
+          <div class="trust-strip" aria-label="Core strengths">
+            <span>100-day plans</span>
+            <span>PMO execution</span>
+            <span>EBITDA improvement</span>
+          </div>
+        </div>
+        <div class="hero-card reveal" aria-label="Value creation focus areas">
+          <div class="card-topline"></div>
+          <h2>Value creation without the drag.</h2>
+          <p>Hands-on leadership to clarify priorities, align teams, remove friction, and keep execution moving.</p>
+          <div class="metric-grid">
+            <div>
+              <strong>30%</strong>
+              <span>EBITDA improvement delivered in PE-backed services</span>
+            </div>
+            <div>
+              <strong>$650M</strong>
+              <span>SaaS logistics platform scaled from startup stage</span>
+            </div>
+            <div>
+              <strong>$100M+</strong>
+              <span>Growth enabled through merger integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section logo-band" aria-label="Engagement themes">
+      <div class="container band-grid">
+        <span>Operating Partner Support</span>
+        <span>Interim COO</span>
+        <span>Chief Transformation Officer</span>
+        <span>Strategy PMO</span>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What We Do</p>
+          <h2>Focused support where strategy needs traction.</h2>
+          <p>i2G Partners steps in when the business needs senior operating capacity, cross-functional alignment, and execution discipline.</p>
+        </div>
+        <div class="cards three-column">
+          <article class="service-card reveal">
+            <span class="icon">01</span>
+            <h3>Interim Operating Leadership</h3>
+            <p>Executive-level support for organizations that need experienced leadership during growth, transition, integration, or turnaround periods.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="icon">02</span>
+            <h3>Transformation Execution</h3>
+            <p>Practical governance, decision cadence, and PMO structure to turn complex change into visible progress and accountable outcomes.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="icon">03</span>
+            <h3>Value Creation Programs</h3>
+            <p>Targeted operating improvements that support margin expansion, digital modernization, customer experience, and scalable growth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section impact-section" id="impact">
+      <div class="container impact-grid">
+        <div class="section-heading left reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Built for complexity, speed, and measurable outcomes.</h2>
+          <p>Experience spans SaaS, healthcare logistics, supply chain, services, Fortune 20 enterprises, and lower middle market companies.</p>
+        </div>
+        <div class="impact-list reveal">
+          <div class="impact-item">
+            <h3>Portfolio company acceleration</h3>
+            <p>Support for private equity sponsors and leadership teams navigating 100-day plans, integration, and performance improvement.</p>
+          </div>
+          <div class="impact-item">
+            <h3>Enterprise transformation</h3>
+            <p>Leadership across operations, technology, go-to-market, and modernization initiatives where cross-functional execution is essential.</p>
+          </div>
+          <div class="impact-item">
+            <h3>Operational turnaround</h3>
+            <p>Hands-on engagement to diagnose issues, establish priorities, create momentum, and improve the operating rhythm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container approach-grid">
+        <div class="approach-panel reveal">
+          <p class="eyebrow">How It Works</p>
+          <h2>Clear priorities. Disciplined execution. Calm leadership.</h2>
+          <p>The approach is practical and outcome-oriented: understand the situation quickly, align leadership around the few things that matter most, and create the cadence required to execute.</p>
+        </div>
+        <div class="steps reveal">
+          <div class="step">
+            <span>1</span>
+            <div>
+              <h3>Diagnose</h3>
+              <p>Assess the business context, stakeholder needs, constraints, and value creation opportunities.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <div>
+              <h3>Align</h3>
+              <p>Translate strategy into a focused execution agenda with owners, milestones, and decision points.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span>3</span>
+            <div>
+              <h3>Execute</h3>
+              <p>Drive accountability, remove barriers, communicate clearly, and keep teams focused on outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Leadership Reputation</p>
+          <h2>Trusted by leaders across transformation, product, M&A, and operations.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <figure class="quote-card reveal">
+            <blockquote>“[Doug’s] depth and range of experience gives him an impressive ability to step back and see issues through a strategic business lens, helping to guide teams to consider alternate ways to move forward while remaining focused on the desired business outcomes.”</blockquote>
+            <figcaption>Senior Product Leader</figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“Doug Schwieger is an optimistic, hard-working, and trusted leader. He approaches opportunities with confidence and fully understands the key results necessary for success.”</blockquote>
+            <figcaption>Mergers &amp; Acquisition Leader</figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“Doug has a vision for the big picture, and he is meticulous with details to see it through to the end. In multiple projects, he visualized the final product and would plan each step and task with thoughtful considerations that many would otherwise miss.”</blockquote>
+            <figcaption>Black Belt / Operations Excellence Leader</figcaption>
+          </figure>
+          <figure class="quote-card reveal">
+            <blockquote>“As a leader, Doug is a positive influence and a calming force when things are challenging and difficult. He doesn't get rattled and sees the path forward.”</blockquote>
+            <figcaption>Operations Executive</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-card reveal">
+        <div>
+          <p class="eyebrow">Ready to Move Faster?</p>
+          <h2>Let’s talk about where your strategy needs execution support.</h2>
+          <p>For interim leadership, transformation programs, operating improvement, or value creation support, reach out to start a conversation.</p>
+        </div>
+        <a class="button" href="mailto:info@i2gpartners.com">Contact i2G Partners</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>i2G Partners LLC</strong>
+        <p>Innovate to Grow</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:info@i2gpartners.com">info@i2gpartners.com</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
