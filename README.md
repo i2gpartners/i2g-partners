@@ -1,27 +1,12 @@
-# i2G Partners LLC Website
+# i2G Partners GitHub Pages Site
 
-Static GitHub Pages website for i2G Partners LLC.
+Upload these files to the root of the `i2g-partners` GitHub repository.
 
-## Upload instructions
+Required image files in the same root folder:
 
-Upload these files to the root of the GitHub repository:
+- `i2G_Logo_DualColor.jpg`
+- `DAD-8.jpeg`
+- `DAD-3.jpeg`
+- `DAD-4.jpeg`
 
-- index.html
-- styles.css
-- script.js
-- CNAME
-- README.md
-
-Also upload these image files to the root of the repository with these exact names:
-
-- i2G_Logo_DualColor.jpg
-- DougHeadshotEdit.png
-- DAD-3.jpeg
-- DAD-4.jpeg
-- DAD-8.jpeg
-
-GitHub Pages settings should be:
-
-- Source: Deploy from a branch
-- Branch: main
-- Folder: /root
+This site is a static GitHub Pages landing page using only HTML, CSS, and JavaScript.
