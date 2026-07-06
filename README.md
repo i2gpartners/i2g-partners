@@ -1,12 +1,16 @@
-# i2G Partners GitHub Pages Site
+# i2G Partners GitHub Pages Landing Page
 
-Upload these files to the root of the `i2g-partners` GitHub repository.
+Upload these files to the root of the GitHub repository:
 
-Required image files in the same root folder:
+- index.html
+- styles-v3.css
+- script-v3.js
+- CNAME
+- README.md
 
-- `i2G_Logo_DualColor.jpg`
-- `DAD-8.jpeg`
-- `DAD-3.jpeg`
-- `DAD-4.jpeg`
+Keep the existing image files in the repository root:
 
-This site is a static GitHub Pages landing page using only HTML, CSS, and JavaScript.
+- i2G_Logo_DualColor.jpg
+- DAD-8.jpeg
+- DAD-3.jpeg
+- DAD-4.jpeg
